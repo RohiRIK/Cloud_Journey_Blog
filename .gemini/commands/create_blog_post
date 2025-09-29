@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Creates a new blog post.
+#
+# Usage: create_blog_post "Your Blog Post Title"
+
+TITLE="$1"
+SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | tr -s ' ' '-' | tr -cd '[:alnum:]-')
+FILE_PATH="blogs/$SLUG.md"
+
+# This is a placeholder for the actual content generation
+# In the future, this will use the gemini tool to generate content based on the title
+# and the GEMINI.md file.
+CONTENT="# $TITLE\n\nThis is a new blog post about '$TITLE'."
+
+echo -e "$CONTENT" > "$FILE_PATH"
+
+echo "Created new blog post: $FILE_PATH"
+
