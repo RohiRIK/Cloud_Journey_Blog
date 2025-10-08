@@ -1,0 +1,12 @@
+description = "Creates a new guide with a clear structure."
+prompt = """
+Create a new guide with the title '{{args}}'.
+
+When creating the guide, please follow these instructions:
+1.  Generate a URL-friendly slug from the title.
+2.  Create a new file in the 'guides' directory with the slug as the filename (e.g., 'guides/my-new-guide.md').
+3.  The content of the guide should be in markdown format.
+4.  The guide should be well-structured and easy to follow.
+5.  The tone of the guide should be clear, concise, and helpful.
+6.  The content should include placeholder sections for an Introduction, step-by-step instructions, and a summary.
+"""
